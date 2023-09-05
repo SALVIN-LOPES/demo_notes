@@ -32,6 +32,7 @@ const EditNote = () => {
     });
 
     navigate("/");
+    window.location.reload();
   };
 
   return (

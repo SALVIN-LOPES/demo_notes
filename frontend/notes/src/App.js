@@ -36,6 +36,7 @@ function App() {
           <TodoForm />
           <Routes>
             <Route path="/" element={<NotesListPage todos={todos} />} />
+            <Route path="/" element={<NotesListPage todos={todos} />} />
             <Route path="/edit/:id" element={<EditNote />} />
           </Routes>
         </div>

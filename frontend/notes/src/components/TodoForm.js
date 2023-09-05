@@ -9,22 +9,21 @@ const TodoForm = () => {
   const navigate = useNavigate();
 
   const handleChange = (e) => {
-    e.preventDefault();
     setTitle(e.target.value);
   };
 
-  const createNote = async (e) => {
+  const createNote = async () => {
     if (!title) return;
 
     let response = await axios
       .post(`/api/notes/`, {
         title: title,
       })
-      .then((response) => response.json)
+      .then((response) => {
+        // response.json
+        window.location.reload()
+      })
       .catch((err) => alert(err));
-
-    // let data = await response.json();
-    // console.log("data = ", data);
 
     navigate("/");
   };
