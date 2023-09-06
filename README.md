@@ -1,5 +1,7 @@
 # SimpleTodo - Your Task Management Solution
 
+![Alt text](<frontend/notes/src/utils/images/Screenshot (583).png>)
+
 SimpleTodo is a lightweight and easy-to-use Todo application designed to help you stay organized and productive. Whether you're managing your daily tasks, tracking important deadlines, or just making a grocery list, SimpleTodo has you covered.
 This application is created using ReactJS (front-end) & Django (back-end).
 
