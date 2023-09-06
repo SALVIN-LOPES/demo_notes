@@ -10,8 +10,12 @@ import axios from "axios";
 import { useParams, Link, useNavigate } from "react-router-dom";
 
 const NotePage = ({ note, key }) => {
-  // const [isCompleted, setIsCompleted] = useState()
+  const [isCompleted, setIsCompleted] = useState(note.completed);
   const navigate = useNavigate();
+
+  useEffect(() => {
+    setIsCompleted(isCompleted);
+  }, [note]);
 
   const handleEdit = (e) => {
     e.preventDefault();
@@ -25,25 +29,27 @@ const NotePage = ({ note, key }) => {
     navigate("/");
   };
 
-  // const handleComplete = async () => {
-  //   await axios.put(`/api/notes/${note.id}`,{
-  //     completed : 
-  //   });
-  //   window.location.reload();
-  //   navigate("/");
-  // }
+  const handleComplete = async () => {
+    console.log("completed changed");
+    setIsCompleted(!isCompleted);
+    await axios.put(`/api/notes/${note.id}/`, {
+      completed: isCompleted,
+    });
+    navigate("/");
+    console.log("completed = ", isCompleted);
+  };
 
   return (
     <div className="notes-list-item">
       <span>{note.title}</span>
-      {/* <form action="" onClick={handleComplete}> */}
-      <input value="test" type="checkbox" /> 
-      {/* </form> */}
+      <form action="" className="form" onClick={handleComplete}>
+        <input value="test" type="checkbox" />
+      </form>
       <div>
-        <form action="" onClick={handleEdit}>
+        <form action="" className="form" onClick={handleEdit}>
           <MdEdit />
         </form>
-        <form action="" onClick={handleDelete}>
+        <form action="" className="form" onClick={handleDelete}>
           <MdDelete />
         </form>
       </div>

@@ -163,6 +163,7 @@ a {
   color: #fff;
   display: inline-block;
   margin-right: 8px;
+  text-decoration: none;
 }
 
 .notes-list-item p {
@@ -175,6 +176,7 @@ a {
   position: absolute;
   bottom: 24px;
   right: 16px;
+  color : #fff;
   background: var(--color-main);
   border: none;
   width: 60px;
@@ -249,4 +251,7 @@ a {
 }
 textarea{
   color: #fff;
+}
+.form{
+  color : #fff;
 }

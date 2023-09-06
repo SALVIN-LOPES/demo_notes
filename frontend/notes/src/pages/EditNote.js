@@ -43,7 +43,7 @@ const EditNote = () => {
         }}
         value={note.title}
       ></textarea>
-      <button onClick={handleEdit}>Edit</button>
+      <button onClick={handleEdit} className="floating-button">Edit</button>
     </div>
   );
 };
