@@ -6,7 +6,7 @@ const Header = () => {
   return (
     <div className="app-header">
       <Link to={"/"}>
-        <h1>Note List</h1>
+        <h1>Smart Notes</h1>
       </Link>
     </div>
   );

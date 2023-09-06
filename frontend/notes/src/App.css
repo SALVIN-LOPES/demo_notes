@@ -194,6 +194,9 @@ a {
   fill: var(--color-bg);
 }
 
+Link{
+  text-decoration: none;
+}
 
 
 /*==============================
